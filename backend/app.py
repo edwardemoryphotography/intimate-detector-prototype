@@ -10,10 +10,14 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route('/api/detect', methods=['POST'])
 def detect():
-    file = request.files['file']
-    filename = secure_filename(file.filename)
+    """Handle image upload and return fake detection results."""
+    uploaded_file = request.files.get('file')
+    if uploaded_file is None or uploaded_file.filename == "":
+        return jsonify({"error": "No file provided"}), 400
+
+    filename = secure_filename(uploaded_file.filename)
     filepath = os.path.join(UPLOAD_FOLDER, filename)
-    file.save(filepath)
+    uploaded_file.save(filepath)
 
     result = {
         "filename": filename,
