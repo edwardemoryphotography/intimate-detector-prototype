@@ -32,7 +32,7 @@ export default function App() {
       type: image.mimeType || 'image/jpeg',
     });
     try {
-      const res = await fetch('http://localhost:5000/api/detect', {
+      const res = await fetch(process.env.EXPO_PUBLIC_API_URL || 'http://localhost:5000/api/detect', {
         method: 'POST',
         body: formData,
         headers: {
