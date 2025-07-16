@@ -28,8 +28,8 @@ export default function App() {
     const formData = new FormData();
     formData.append('file', {
       uri: image.uri,
-      name: 'image.jpg',
-      type: 'image/jpeg',
+      name: image.fileName || 'photo.jpg',
+      type: image.mimeType || 'image/jpeg',
     });
     try {
       const res = await fetch('http://localhost:5000/api/detect', {
