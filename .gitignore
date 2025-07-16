@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# Mac
+.DS_Store
+
+# Expo build
+mobile/.expo/
+
