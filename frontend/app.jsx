@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+const { useState } = React;
 
-export default function Home() {
+function App() {
   const [image, setImage] = useState(null);
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -44,3 +44,7 @@ export default function Home() {
     </main>
   );
 }
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<App />);
