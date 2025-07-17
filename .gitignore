@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-selfcheck.json
+
+# Node
+node_modules/
+dist/
+.npm/
+
+# OS
+.DS_Store
+Thumbs.db

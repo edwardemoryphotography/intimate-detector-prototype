@@ -1,69 +1,73 @@
-Intimate Detector Prototype
+# Intimate Area Detector
 
-Welcome to the Intimate Detector Prototype repository. This project aims to develop a system that identifies and categorizes intimate content using advanced AI and machine learning techniques.
+This is a simple web application that uses the `nudenet` library to detect intimate areas in images.
 
-Table of Contents
+## Setup
 
-Overview
-Features
-Installation
-Usage
-Contributing
-License
-Overview
+### Prerequisites
 
-The Intimate Detector Prototype is designed to analyze and detect sensitive or explicit content in images or text. This tool is built to help developers, organizations, and individuals maintain compliance with content moderation policies.
+*   [Docker](https://www.docker.com/)
 
-Features
+### Running the application
 
-Image Content Detection: Identify explicit images using AI models.
-Text Content Detection: Analyze and categorize sensitive text.
-Customizable Thresholds: Adjust detection thresholds based on requirements.
-Real-time Processing: Fast and efficient detection for high performance.
-Integration Ready: Easily integrate with existing workflows and applications.
-Installation
+1.  Build the Docker image:
 
-To set up the project locally, follow these steps:
+    ```bash
+    docker build -t intimate-area-detector .
+    ```
 
-Clone the repository:
+2.  Run the Docker container:
 
-git clone https://github.com/edwardemoryphotography/intimate-detector-prototype.git
-Navigate to the project directory:
+    ```bash
+    docker run -p 5000:5000 intimate-area-detector
+    ```
 
-cd intimate-detector-prototype
-Install dependencies:
+3.  Open your browser and go to `http://localhost:5000`.
 
-pip install -r requirements.txt
-Run initial setup (if applicable):
+## Development
 
-python setup.py
-Usage
+### Prerequisites
 
-Running the Detector
+*   [Python 3.9](https://www.python.org/downloads/release/python-390/)
+*   [Node.js 18](https://nodejs.org/en/download/releases/)
 
-To run the detector, execute:
+### Backend
 
-python intimate_detector.py --input [image or text file]
-Example
+1.  Create a virtual environment:
 
-python intimate_detector.py --input sample_image.jpg
-Optional Arguments
+    ```bash
+    python3 -m venv venv
+    ```
 
---threshold: Set the detection threshold (default: 0.5).
---output: Specify the output file for results.
-Contributing
+2.  Activate the virtual environment:
 
-We welcome contributions to improve the Intimate Detector Prototype. To contribute:
+    ```bash
+    source venv/bin/activate
+    ```
 
-Fork the repository.
-Create a branch for your feature or fix.
-Submit a pull request with a detailed description of your changes.
-Please follow our Code of Conduct when contributing.
+3.  Install the dependencies:
 
-License
+    ```bash
+    pip install -r backend/requirements.txt
+    ```
 
-This project is licensed under the MIT License. Feel free to use, modify, and distribute it as per the license terms.
+4.  Run the backend server:
 
-Contact
+    ```bash
+    python backend/app.py
+    ```
 
-For questions or support, please reach out to Edward Emory Photography.
+### Frontend
+
+1.  Install the dependencies:
+
+    ```bash
+    cd frontend
+    npm install
+    ```
+
+2.  Run the frontend development server:
+
+    ```bash
+    npm run dev
+    ```
