@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Intimate Detector v3.2</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="config.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header><h1>Intimate Detector v3.2</h1></header>
+<main>
+  <section class="card">
+    <h2>Options</h2>
+    <label><input type="checkbox" id="strictMode"/> Strict NSFW Mode</label>
+  </section>
+  <section class="card">
+    <h2>Image detection</h2>
+    <input type="file" id="imgInput" accept="image/*" required/>
+    <input type="range" id="imgThreshold" min="0" max="1" step="0.01" value="0.5"/>
+    <span id="imgTVal">0.5</span>
+    <button id="imgBtn">Analyze Image</button>
+    <pre id="imgOut" class="out"></pre>
+  </section>
+  <section class="card">
+    <h2>Text detection</h2>
+    <textarea id="txtInput" rows="4"></textarea>
+    <input type="range" id="txtThreshold" min="0" max="1" step="0.01" value="0.5"/>
+    <span id="txtTVal">0.5</span>
+    <button id="txtBtn">Analyze Text</button>
+    <pre id="txtOut" class="out"></pre>
+  </section>
+</main>
+</body>
+</html>

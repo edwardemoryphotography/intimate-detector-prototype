@@ -1,0 +1,1 @@
+window.APP_CONFIG={BACKEND_BASE:"http://192.168.0.132:8000"};
